@@ -75,7 +75,7 @@ try:
 	image = Image.open(img_file_buffer)
 	img_array = np.array(image)
 	st.write("""
-		Previsualización 👀 O dar imagen
+		Previsualización 👀
 		""")
 	if image is not None:
 	    st.image(
