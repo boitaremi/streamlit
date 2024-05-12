@@ -69,7 +69,7 @@ st.write("""
 	""")
 
 #========================== File Uploader ===================================
-img_file_buffer = st.file_uploader("Carga tu imagen aqu 👇🏻")
+img_file_buffer = st.file_uploader("Carga tu imagen aquí 👇🏻")
 
 try:
 	image = Image.open(img_file_buffer)
