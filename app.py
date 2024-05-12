@@ -27,16 +27,17 @@ st.image(
 
 #================================= About =================================
 st.write("""
-## 1️⃣ About
+## 1️⃣ Sobre la app
 	""")
 st.write("""
-Hola, Bienvenidos a esta actividad. Es una aplicación de reconocimiento de gatos y perros
+Hola, Bienvenidos a esta actividad.
+Es una aplicación de reconocimiento de gatos y perros
 	""")
 st.write("""
 Tienes que cargar las imágenes que quieras identificar
 	""")
 st.write("""
-**O**, en caso de que no tengas imágenes, puedes seleccionar alguna de aquísection & click the **⬇️ Download** button to download those pictures!  
+En caso de que no tengas imágenes, puedes seleccionar alguna de aquí 
 	""")
 
 #============================ How To Use It ===============================
@@ -51,7 +52,7 @@ Es muy sencillo!!!
 - Asegurate que has cargado una imagen
 - Haz click **👉🏼 Identificar** 
 
-🔘 **NOTA :** *So cargas otro archivo que no sea una imagen, se mostrará un mensaje de error cuando apretes el boton de Identificar*
+🔘 **NOTA :** *Si cargas otro archivo que no sea una imagen, se mostrará un mensaje de error cuando apretes el boton de Identificar*
 	""")
 
 #========================= What It Will Predict ===========================
