@@ -11,7 +11,7 @@ import webbrowser # inbuilt module
 
 #=================================== Title ===============================
 st.title("""
-Cat 🐱 Or Dog 🐶 Recognizer
+Identificador de Gato 🐱 O Perro 🐶
 	""")
 
 #================================= Title Image ===========================
@@ -30,51 +30,51 @@ st.write("""
 ## 1️⃣ About
 	""")
 st.write("""
-Hi all, Welcome to this project. It is a Cat Or Dog Recognizer App!!!
+Hola, Bienvenidos a esta actividad. Es una aplicación de reconocimiento de gatos y perros
 	""")
 st.write("""
-You have to upload your own test images to test it!!!
+Tienes que cargar las imágenes que quieras identificar
 	""")
 st.write("""
-**Or**, if you are too much lazy **(**😎, like me!**)**, then also no problem, we already selected some test images for you, you have to just go to that section & click the **⬇️ Download** button to download those pictures!  
+**O**, en caso de que no tengas imágenes, puedes seleccionar alguna de aquísection & click the **⬇️ Download** button to download those pictures!  
 	""")
 
 #============================ How To Use It ===============================
 st.write("""
-## 2️⃣ How To Use It
+## 2️⃣ Como usar la app
 	""")
 st.write("""
-Well, it's pretty simple!!!
-- Let me clear first, the model has power to predict image of Cats and Dogs only, so you are requested to give image of a Cat Or a Dog, unless useless prediction can be done!!! 😆 
-- First of all, download image of a Cat 🐈 or a Dog 🐕!
-- Next, just Browse that file or Drag & drop that file!
-- Please make sure that, you are uploading a picture file!
-- Press the **👉🏼 Predict** button to see the magic!!!
+Es muy sencillo!!!
+ 
+- Primero, descarga una imagen de gato 🐈 o perro 🐕!
+- Después, búscala desde el explorador de archivos
+- Asegurate que has cargado una imagen
+- Haz click **👉🏼 Identificar** 
 
-🔘 **NOTE :** *If you upload other than an image file, then it will show an error massage when you will click the* **👉🏼 Predict** *button!!!*
+🔘 **NOTA :** *So cargas otro archivo que no sea una imagen, se mostrará un mensaje de error cuando apretes el boton de Identificar*
 	""")
 
 #========================= What It Will Predict ===========================
 st.write("""
-## 3️⃣ What It Will Predict
+## 3️⃣ ¿Qué identifica?
 	""")
 st.write("""
-Well, it can predict wheather the image you have uploaded is the image of a Cat 🐈 or a Dog 🐕!
+Cualquier imagen que se cargue de perros o gatos
 	""")
 
 #======================== Time To See The Magic ===========================
 st.write("""
-## 👁️‍🗨️ Time To See The Magic 🌀
+## 👁️‍🗨️ Prueba suerte
 	""")
 
 #========================== File Uploader ===================================
-img_file_buffer = st.file_uploader("Upload an image here 👇🏻")
+img_file_buffer = st.file_uploader("Carga tu imagen aqu 👇🏻")
 
 try:
 	image = Image.open(img_file_buffer)
 	img_array = np.array(image)
 	st.write("""
-		Preview 👀 Of Given Image!
+		Previsualización 👀 O dar imagen
 		""")
 	if image is not None:
 	    st.image(
@@ -82,19 +82,19 @@ try:
 	        use_column_width=True
 	    )
 	st.write("""
-		Now, you are just one step ahead of prediction.
+		Te queda solo un paso.
 		""")
 	st.write("""
-		**Just Click The '👉🏼 Predict' Button To See The Prediction Corresponding To This Image! 😄**
+		**Haz click en '👉🏼 Identificar' ! 😄**
 		""")
 except:
 	st.write("""
-		### ❗ Any Picture hasn't selected yet!!!
+		### ❗ No se ha seleccionado ninguna imagen!!!
 		""")
 
 #================================= Predict Button ============================
 st.text("""""")
-submit = st.button("👉🏼 Predict")
+submit = st.button("👉🏼 Identificar")
 
 #==================================== Model ==================================
 def processing(testing_image_path):
@@ -109,15 +109,15 @@ def processing(testing_image_path):
 
 def generate_result(prediction):
 	st.write("""
-	## 🎯 RESULT
+	## 🎯 RESULTADO
 		""")
 	if prediction[0]<0.5:
 	    st.write("""
-	    	## Model predicts it as an image of a CAT 🐱!!!
+	    	## Es un GATO 🐱!!!
 	    	""")
 	else:
 	    st.write("""
-	    	## Model predicts it as an image of a DOG 🐶!!!
+	    	## Es un perro 🐶!!!
 	    	""")
 
 #=========================== Predict Button Clicked ==========================
@@ -128,7 +128,7 @@ if submit:
 
 		image_path = "temp_dir/test_image.png"
 		# Predicting
-		st.write("👁️ Predicting...")
+		st.write("👁️ Identificando...")
 
 		model_path_h5 = "model/model.h5"
 		model_path_json = "model/model.json"
@@ -146,7 +146,7 @@ if submit:
 
 	except:
 		st.write("""
-		### ❗ Oops... Something Is Going Wrong
+		### ❗ Ups... Algo fue mal
 			""")
 
 #=============================== Copy Right ==============================
