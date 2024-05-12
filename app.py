@@ -11,7 +11,7 @@ import webbrowser # inbuilt module
 
 #=================================== Title ===============================
 st.title("""
-Identificador de Gato 🐱 O Perro 🐶
+Identificador de Gatos 🐱 o Perros 🐶
 	""")
 
 #================================= Title Image ===========================
